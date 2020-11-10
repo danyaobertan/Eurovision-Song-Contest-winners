@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using EUMusic.Data;
 using EUMusic.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace EUMusic.Pages.Winners
 {
@@ -20,10 +21,23 @@ namespace EUMusic.Pages.Winners
         }
 
         public IList<Winner> Winner { get;set; }
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
+        public SelectList ContestWinner { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string ContestWinners { get; set; }
 
         public async Task OnGetAsync()
         {
-            Winner = await _context.Winner.ToListAsync();
+            var winners = from m in _context.Winner
+                         select m;
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                winners = winners.Where(s => s.Performer.Contains(SearchString));
+            }
+
+            Winner = await winners.ToListAsync();
         }
+
     }
 }
