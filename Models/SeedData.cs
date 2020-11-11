@@ -26,7 +26,7 @@ namespace EUMusic.Models
                     {
                         Date = DateTime.Parse("1956-5-24"),
                         HostCity = "Lugano",
-                        WinnerCountry = " Switzerland",
+                        WinnerCountry = "Switzerland",
                         SongTitle = "Refrain",
                         Performer = "Lys Assia",
                         Language = "French",
@@ -36,7 +36,7 @@ namespace EUMusic.Models
                     {
                         Date = DateTime.Parse("1957-3-3"),
                         HostCity = "Frankfurt",
-                        WinnerCountry = " Netherlands",
+                        WinnerCountry = "Netherlands",
                         SongTitle = "Net als toen",
                         Performer = "Corry Brokken",
                         Language = "Dutch",
@@ -46,7 +46,7 @@ namespace EUMusic.Models
                     {
                         Date = DateTime.Parse("1958-3-12"),
                         HostCity = "Hilversum",
-                        WinnerCountry = " France",
+                        WinnerCountry = "France",
                         SongTitle = "Dors, mon amour",
                         Performer = "André Claveau",
                         Language = "French",
@@ -56,7 +56,7 @@ namespace EUMusic.Models
                     {
                         Date = DateTime.Parse("1959-3-11"),
                         HostCity = "Cannes",
-                        WinnerCountry = " Netherlands",
+                        WinnerCountry = "Netherlands",
                         SongTitle = "Een beetje",
                         Performer = "Teddy Scholten",
                         Language = "Dutch",
@@ -85,7 +85,7 @@ namespace EUMusic.Models
                     new Winner
                     {
                         Date = DateTime.Parse("1962-3-18"),
-                        HostCity = " Luxembourg",
+                        HostCity = "Luxembourg",
                         WinnerCountry = "France",
                         SongTitle = "Un premier amour",
                         Performer = "Isabelle Aubret",
