@@ -29,10 +29,6 @@ namespace EUMusic.Pages.Winners
 
         public async Task OnGetAsync()
         {
-            // Use LINQ to get list of genres.
-            //IQueryable<string> winnerQuery = ((from m in _context.Winner
-            //                                orderby m.WinnerCountry
-            //                                select m.WinnerCountry).Distinct());
 
             IQueryable<string> winnerQuery = ((from m in _context.Winner
                                                orderby m.WinnerCountry
@@ -48,7 +44,7 @@ namespace EUMusic.Pages.Winners
             {
                 winners = winners.Where(x => x.WinnerCountry == ContestWinner);
             }
-            //ContestWinner = Winners
+
             ContestWinners = new SelectList(await winnerQuery.ToListAsync());
             Winner = await winners.ToListAsync();
         }
